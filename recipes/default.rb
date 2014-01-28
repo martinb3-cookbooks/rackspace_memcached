@@ -28,9 +28,9 @@ template "/etc/memcached.conf" do
   owner "memcache"
   group "memcache"
   variables({
-    :memcached_port => node[:memcached][:config][:port],
-    :memcached_memory => node[:memcached][:config][:memory],
-    :memcached_maxconnections => node[:memcached][:config][:maxconnections]
+    'memcached_port' => node['memcached']['config']['port'],
+    'memcached_memory' => node['memcached']['config']['memory'],
+    'memcached_maxconnections' => node['memcached']['config']['maxconnections']
   })
 end
 
