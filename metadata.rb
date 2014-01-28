@@ -1,3 +1,4 @@
+# encoding: utf-8
 name             'rackspace_memcached'
 maintainer       'Rackspace Hosting'
 maintainer_email 'martin.smith@rackspace.com'

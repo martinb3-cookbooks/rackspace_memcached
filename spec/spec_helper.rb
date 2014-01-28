@@ -1,3 +1,4 @@
+# encoding: utf-8
 # spec_helper.rb
 require 'chefspec'
 require 'chefspec/berkshelf'

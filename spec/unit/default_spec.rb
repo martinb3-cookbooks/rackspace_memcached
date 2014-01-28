@@ -1,12 +1,14 @@
+# encoding: utf-8
+
 require 'chefspec'
 require 'chefspec/berkshelf'
 
 describe 'rackspace_memcached::default' do
-  let(:chef_run) do 
+  let(:chef_run) do
     ChefSpec::Runner.new(platform: 'ubuntu', version: '12.04') do |node|
-      node.set['memory']['total']=100
+      node.set['memory']['total'] = 100
       node.set['memcached']['config']['port'] = '12345'
-      node.set["memcached"]["config"]["memcachedconf"]["-l"]="127.0.0.1"
+      node.set['memcached']['config']['memcachedconf']['-l'] = '127.0.0.1'
     end.converge(described_recipe)
   end
 
@@ -38,4 +40,3 @@ describe 'rackspace_memcached::default' do
     expect(chef_run).to start_service('memcached')
   end
 end
-
