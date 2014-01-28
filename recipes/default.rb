@@ -30,7 +30,8 @@ template "/etc/memcached.conf" do
   variables({
     'memcached_port' => node['memcached']['config']['port'],
     'memcached_memory' => node['memcached']['config']['memory'],
-    'memcached_maxconnections' => node['memcached']['config']['maxconnections']
+    'memcached_maxconnections' => node['memcached']['config']['maxconnections'],
+    'memcached_memcachedconf' => node['memcached']['config']['memcachedconf']
   })
 end
 
