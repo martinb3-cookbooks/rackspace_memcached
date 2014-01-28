@@ -3,4 +3,4 @@ knife_test: bundle exec knife cookbook test $COOKBOOK -o $SANDBOX -z
 rubocop:    bundle exec rubocop --no-color
 foodcritic: bundle exec foodcritic -f any $SANDBOX/$COOKBOOK
 chefspec:   bundle exec rspec
-kitchen:    bundle exec kitchen test --destroy always
+kitchen:    bundle exec kitchen test --destroy always default-ubuntu-1204
