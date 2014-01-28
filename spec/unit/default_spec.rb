@@ -27,6 +27,7 @@ describe 'rackspace_memcached::default' do
   it 'populate config template with correct values' do
     expect(chef_run)
       .to render_file('/etc/memcached.conf')
+      .with_content('-m 75')
       .with_content('-p 12345')
       .with_content('-l 127.0.0.1')
   end
